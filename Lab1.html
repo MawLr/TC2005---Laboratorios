@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>
+        Laboratorio 1 - TC2005B
+    </title>
+</head>
+
+<body style="background-color:#e6e6e6">
+    
+    <div align="center">
+        <h1>Laboratorio 1 - TC2005B</h1>
+        <h2>Introducción:</h2>
+        <p>
+            Mi nombre es <b>José Manuel Medina Rodríguez</b>, A01706212, soy estudiante de ITC y tengo 21 años, </br>
+            originalmente me uní a la carrera en el año 2019 pero por motivos administrativos me retrasé un año, </br>
+            el año adicional me permitió crecer en cuanto a experiencia y a conocimientos por lo que lo considero algo positivo, </br>
+            en cuanto a mi persona, soy alguien que considera que todo conocimiento es útil, considero que debemos saber de todo un poco, </br>
+            no en el sentido de ser «aprendíz de todo y capitán de nada», pero en el sentido de que debemos ser polímatas en nuestra vida.
+        </p>
+    </div>
+<hr>
+    <div align="center">
+        <h2>Acerca de mí:</h2>
+        <p>
+            En cuanto a experiencia puedo decir que estoy avanzado en la programación de C++, me sé mover en lenguajes como C#, LuaScript </br>
+            y Python, en éste último tuve la oportunidad de programar sistemas multiagentes utilizando el modulo MESA en la clase TC2008B, </br>
+            también hice uso del lenguaje R durante uno de mis cursos donde logré llegar a un dominio de lo básico, en el futuro quiero </br>
+            aprender ABAP, el lenguaje utilizado por SAP para abrir mis posibilidades de trabajo en dicha área.
+        </p>
+
+        <p>
+            Hablando en términos más personales, considero que el ejercicio es muy importante para una persona, igual considero que todos los deportes </br>
+            son buenos porque nos ayudan a desarrolar habilidades que utilizamos en nuestra vida diaria además del desarrollo del físico, una de las frases </br>
+            que considero más importantes es el probervio Chino: <em>«civiliza la mente pero haz salvaje el cuerpo»</em>, con esta frase también quiero decir </br>
+            que para mí es muy importante el ejercitar la mente, lectura de filósofos, de libros pertinentes e incluso de una que otra historia de ficción pero </br>
+            sin despegar los pies de la tierra. En cuanto a mis pasatiempos, pues, la mayoría lo dije entre líneas, me gusta hacer ejercicio, </br>
+            rucking, leer, escribir entre otras cosas.
+        </p>
+    </div>
+<hr>
+    <div align="center">
+        <h2>Datos de Contacto:</h2>
+        <address>
+            José Manuel Medina Rodríguez </br>
+            A01706212, ITESM </br>
+            Correo electrónico: A01706212@tec.mx </br>
+        </address>
+    </div>
+<hr>
+    <div align="left">
+        <h2 align="center">Preguntas a responder:</h2>
+        <h3>¿Cuál es la diferencia entre Internet y la World Wide Web?</h3>
+        <p>
+            La «Internet» es la red de computadores interconectadas en las que trabaja la web y por donde viaja la información, mientras que la </br>
+            World Wide Web, W3 o WWW es donde se encuentran las páginas web a las que accedemos, podemos decir que internet equivale a la infraestructura </br>
+            mientras que la web es lo que viaja por dicha infraestructura y sin ella no podría funcionar.
+        </p>
+
+        <h3>¿Cuáles son las partes de un URL?</h3>
+        <p align="center">
+            La siguiente imagen lo describe muy bien: </br>
+            <img src="url-partes.png">
+        </p>
+
+        <h3>¿Cuál es el propósito de los métodos HTTP: GET, HEAD, POST, PUT, PATCH, DELETE?</h3>
+        <p>
+            <b>GET:</b> </br>
+            El método GET solicita una representación de un recurso especificado, las solicitudes GET sólo deben obtener datos. </br>
+
+            <b>HEAD:</b> </br>
+            El método HEAD solicita una respuesta igual al método GET pero sin cuerpo de respuesta. </br>
+
+            <b>POST:</b> </br>
+            El método POST publica una entidad al recurso especificado, causando un cambio de estado o efectos en el servidor. </br>
+
+            <b>PUT:</b> </br>
+            El método PUT reemplaza todas las actuales representaciones del recurso objetivo con la carga útil solicitada. </br>
+
+            <b>PATCH:</b> </br>
+            El método PATCH aplica modificaciones parciales a un recurso. </br>
+
+            <b>DELETE:</b> </br>
+            El método DELETE elimina el recurso especificado. </br>
+        </p>
+
+        <h3>¿Qué método HTTP se debe utilizar al enviar un formulario HTML, por ejemplo cuando ingresas tu usuario y contraseña en algún sitio? ¿Por qué?</h3>
+        <p>
+            Un método POST porque deseas enviar esa información, sin embargo, es muy recomendado utilizar HTTPS o SSL porque utilizando los métodos HTTP es muy </br>
+            fácil que una aplicación que está espiando pueda obtener esa información sensible.
+        </p>
+
+        <h3>¿Qué método HTTP se utiliza cuando a través de un navegador web se accede a una página a través de un URL?</h3>
+        <p>
+            Un método GET, pues sólo estamos solicitando el despliegue de los recursos de la página en nuestro navegador.
+        </p>
+
+        <h3>Un servidor web devuelve una respuesta HTTP con código 200. ¿Qué significa esto? ¿Ocurrió algún error?</h3>
+        <p>
+            Una respuesta HTTP 200 significa que la solicitud fue exitosa, así que no ocurrió ningún error.
+        </p>
+
+        <h3>¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio y se encontró con un error 404? ¿Por qué?</h3>
+        <p>
+            Depende, el error 404 significa que el recurso solicitado no fue encontrado, pero puede ser que en realidad el desarrollador no lo haya incluído o que el usuario </br>
+            ingresó a una dirección que no existe, quizá con errores en la escritura de dicha dirección.
+        </p>
+
+        <h3>¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio y se encontró con un error 500? ¿Por qué?</h3>
+        <p>
+            Nuevamente depende, el error 500 significa que no se pudo realizar la solicitud de manera exitosa, en general los errores 500 son por parte de la conexión del </br>
+            usuario, pero puede ser que a veces ocurran por servidores intermediarios que no están respondiendo a las solicitudes.
+        </p>
+
+        <h3>¿Qué significa que un atributo HTML5 esté depreciado o desaprobado (deprecated)? Menciona algunos elementos de HTML 4 que en HTML5 estén desaprobados.</h3>
+        <p>
+            Significa que no se recomienda su uso en HTML5 pero aún son reconocidos, algunos ejemplos son: <i>BASEFRONT, CENTER, FONT, STRIKE.</i>
+        </p>
+
+        <h3>¿Cuáles son las diferencias principales entre HTML 4 y HTML5?</h3>
+        <p>
+            Una de las diferencias más grandes es que HTML5 ya no depende de plug-ins de terceros como lo hacía en HTML4 para ciertas funciones (como Flash) </br>
+            ahora HTML5 cuenta con su propio soporte de multimedia, además es más simple en cuanto a su sintaxis y permite un mejor manejo de errores de código, </br>
+            además de ciertos cambios a etiquetas y a estructuras de tablas, en general fue un buen paso adelante para HTML.
+        </p>
+
+        <h3>¿Qué componentes de estructura y estilo tiene una tabla?</h3>
+        <p align="center">
+            La estructura general de una tabla requiere de la etiqueta «table», para darle formato necesitamos «tr = table row» y «td = table data», para dar más estilo </br>
+            necesitamos utilizar etiquetas como «thead», «th», «tbody», «colgroup» «style y span», a continuación un ejemplo: </br>
+            <table border="1" align="center">
+                <colgroup>
+                    <col span="2">
+                </colgroup>
+                <tr style="background-color: #cce6ff">
+                    <th>País</th>
+                    <th>Capital</th>
+                    <th>Población</th>
+                    <th>Lenguaje</th>
+                </tr>
+                <tr>
+                    <td>URSS</td>
+                    <td>Moscú</td>
+                    <td>20,000,000</td>
+                    <td>Ruso</td>
+                </tr>
+                <tr>
+                    <td>RDA</td>
+                    <td>Berlín Oriental</td>
+                    <td>3,500,000</td>
+                    <td>Alemán</td>
+                </tr>
+            </table>
+        </p>
+
+        <h3>¿Cuáles son los principales controles de una forma HTML5?</h3>
+        <p align="center">
+            <i>Input, button, checkbox, radio, file, hidden, image, password, reset y submit.</i> </br>
+            A continuación un ejemplo de un input y un button: </br>
+
+            <button type="submit">
+                Este es un <strong>botón de envío</strong>
+            </button>
+            
+            <input type="submit" value="Este es otro botón de envío"> </br>
+
+            Ahora un campo para texto hecho con input: </br>
+
+            <input type="text" id="comment" name="comment" value="Soy un campo de texto">
+
+        </p>
+
+        <h3>¿Qué tanto soporte HTML5 tiene el navegador que utilizas?</h3>
+        <p>
+            525 de 555 elementos, el navegador que utilizo es Ungoogled Chromium.
+        </p>
+
+        <h3>¿Cuál es el ciclo de vida de los sistemas de información?</h3>
+        <p>
+            1. Definición de requerimientos. </br>
+            2. Análisis y diseño. </br>
+            3. Implementación y prueba de unidades. </br>
+            4. Integración y prueba del sistema. </br>
+            5. Operación y mantenimiento. </br>
+        </p>
+        <h3>¿Cuál es el ciclo de desarrollo de sistemas de información?</h3>
+        <p>
+            1. Planificación del concepto. </br>
+            2. Definición de requisitos. </br>
+            3. Diseña. </br>
+            4. Fase del desarrollo y pruebas. </br>
+            5. Puesta en marcha. </br>
+            6. Operaciones y mantenimiento. </br>
+            7. Disposición </br>
+        </p>
+    </div>
+</body>
+</html>
