@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Lab6</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost&amp;display=swap">
+    <link rel="stylesheet" href="assets/css/Login-Form-Clean.css">
+    <link rel="stylesheet" href="assets/css/Navigation-with-Button.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body style="background: var(--bs-gray-200);border-style: none;">
+    <div id="navbar">
+        <section>
+            <nav class="navbar navbar-light navbar-expand-lg navigation-clean-button" style="height: 60px;background: var(--bs-gray-dark);">
+                <div class="container"><a class="navbar-brand" href="index.html" style="color: var(--bs-light);font-family: Jost, sans-serif;">Lab 5 y 6</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navcol-1">
+                        <ul class="navbar-nav me-auto">
+                            <li class="nav-item"><a class="nav-link" href="index.html" style="font-family: Jost, sans-serif;color: var(--bs-gray-300);">Laboratorio 5</a></li>
+                            <li class="nav-item"><a class="nav-link" href="Lab6.html" style="font-family: Jost, sans-serif;color: var(--bs-gray-300);">Laboratorio 6</a></li>
+                        </ul><span class="navbar-text actions"> <a class="login" href="#" style="color: var(--bs-gray-100);font-family: Jost, sans-serif;">Ejercicio Passwords</a></span>
+                    </div>
+                </div>
+            </nav>
+        </section>
+    </div>
+    <div id="banner">
+        <section style="background: url(&quot;assets/img/L6_banner.jpg&quot;) top / cover no-repeat;height: 300px;box-shadow: 0px 0px 5px;">
+            <h1 style="text-align: center;padding: 15px;color: var(--bs-white);font-family: Jost, sans-serif;font-weight: bold;">Laboratorio 6 - JavaScript</h1>
+        </section>
+    </div>
+    <div id="info" style="background: var(--bs-gray-100);">
+        <section style="margin: 50px;padding: 25px;padding-right: 75px;padding-left: 75px;padding-top: 25px;padding-bottom: 10px;">
+            <h3 style="font-family: Jost, sans-serif;text-align: center;">Laboratorio 6 - Ejercicio Tienda</h3>
+            <p>En este Laboratorio utilizaremos JavaScript para hacer una serie de ejercicios, en este caso, una tienda que agregue productos a un «carrito», nada fuera de lo ordinario, en esta pestaña se encuentra la supuesta tienda, el otro ejercicio se puede acceder dando clic al botón «Iniciar Sesión».</p>
+        </section>
+    </div>
+    <div id="tienda" style="background: var(--bs-gray-100);">
+        <section style="margin: 50px;padding: 25px;padding-right: 75px;padding-left: 75px;padding-top: 25px;padding-bottom: 10px;">
+            <h3 style="font-family: Jost, sans-serif;text-align: center;">Bienvenido a la Tienda, éste es el Catálogo:</h3>
+        </section>
+        <section style="margin: 50px;padding: 25px;padding-right: 75px;padding-left: 75px;padding-top: 10px;padding-bottom: 10px;">
+            <div id="product-container">
+                <div class="d-inline-block" id="product-media"><img class="float-none" width="250px" height="250px" src="assets/img/manzana.jpg" alt="manzana" style="border-style: groove;"></div>
+                <div class="d-inline-block" id="product-data" style="padding: 20px;">
+                    <h3 id="product-1-name" style="font-family: Jost, sans-serif;">1kg Manzana</h3><strong style="font-family: Jost, sans-serif;">$</strong><strong id="precio1" style="font-family: Jost, sans-serif;">15.00</strong>
+                    <div id="product-controls">
+                        <div id="product-btns"><button id="decreaseBtn1" type="button" style="width: 30px;height: 30px;">-</button><input type="text" id="displayQty1" style="width: 30px;text-align: center;" value="1" readonly=""><button id="increaseBtn1" type="button" style="width: 30px;height: 30px;text-align: center;">+</button><button id="addProduct1" type="button" style="margin: 10px;">Agregar a la cesta</button></div>
+                    </div>
+                    <div id="product-desc" style="font-family: Jost, sans-serif;">
+                        <p>Manzanas de cosecha local, las mejores la región, de muy buen sabor.<br></p>
+                    </div>
+                </div>
+            </div>
+            <div id="product-container2">
+                <div class="d-inline-block" id="product-media-1"><img class="float-none" width="250px" height="250px" src="assets/img/platano.jpg" alt="platano" style="border-style: groove;"></div>
+                <div class="d-inline-block" id="product-data-2" style="padding: 20px;">
+                    <h3 id="product-name-2" style="font-family: Jost, sans-serif;">1kg Plátano</h3><strong style="font-family: Jost, sans-serif;">$</strong><strong id="precio2" style="font-family: Jost, sans-serif;">25.00</strong>
+                    <div id="product-controls-1">
+                        <div id="product-btns-1"><button id="decreaseBtn2" type="button" style="width: 30px;height: 30px;">-</button><input type="text" id="displayQty2" style="width: 30px;text-align: center;" value="1" readonly=""><button id="increaseBtn2" type="button" style="width: 30px;height: 30px;text-align: center;">+</button><button id="addProduct2" type="button" style="margin: 10px;">Agregar a la cesta</button></div>
+                    </div>
+                    <div id="product-desc-1" style="font-family: Jost, sans-serif;">
+                        <p>Plátanos de cosecha local, los mejores de la región, muy buen sabor.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="product-container3">
+                <div class="d-inline-block" id="product-media-2"><img class="float-none" width="250px" height="250px" src="assets/img/limon.jpg" alt="platano" style="border-style: groove;"></div>
+                <div class="d-inline-block" id="product-data-1" style="padding: 20px;">
+                    <h3 id="product-name-3" style="font-family: Jost, sans-serif;">1kg Limón</h3><strong style="font-family: Jost, sans-serif;">$</strong><strong id="precio3" style="font-family: Jost, sans-serif;">25.00</strong>
+                    <div id="product-controls-2">
+                        <div id="product-btns-2"><button id="decreaseBtn3" type="button" style="width: 30px;height: 30px;">-</button><input type="text" id="displayQty3" style="width: 30px;text-align: center;" value="1" readonly=""><button id="increaseBtn3" type="button" style="width: 30px;height: 30px;text-align: center;">+</button><button id="addProduct3" type="button" style="margin: 10px;">Agregar a la cesta</button></div>
+                    </div>
+                    <div id="product-desc-2" style="font-family: Jost, sans-serif;">
+                        <p>Limones de cosecha local, los mejores de la región, muy buen jugo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div id="checkout" style="background: var(--bs-gray-100);">
+        <section style="margin: 50px;padding: 25px;padding-right: 75px;padding-left: 75px;padding-top: 25px;padding-bottom: 10px;">
+            <h3 style="font-family: Jost, sans-serif;text-align: center;">Checkout</h3><label class="form-label" style="font-size: 20px;font-family: Jost, sans-serif;">Subtotal: $<br></label><label class="form-label" id="subtotal" style="font-size: 20px;font-family: Jost, sans-serif;">0<br></label>
+        </section>
+    </div>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/Lab6PW.js"></script>
+    <script src="assets/js/Lab6Store.js"></script>
+</body>
+
+</html>

@@ -1,31 +1,26 @@
 // (!) El archivo HTML se está haciendo en el framework Bootstrap Studio y será publicado al estar listo. (!) //
 
-// Definición del Botón:
-
-let logpanelBtn = document.getElementById("logpanelBtn");
-
-// Definición de la función para desplegar el Form:
-
-function displayLogIn(){
-    let logDiv = document.getElementById("loginDiv");
-    logDiv.classList.remove("invisible");
-    logDiv.classList.add("visible");
-}
-
-// Evento a detonar la función:
-
-logpanelBtn.onclick = displayLogIn;
+// Variables universales:
 
 let cestaBtn1 = document.getElementById("addProduct1");
 let cestaBtn2 = document.getElementById("addProduct2");
+let cestaBtn3 = document.getElementById("addProduct3");
+
 let qty1 = document.getElementById("displayQty1");
 let qty2 = document.getElementById("displayQty2");
-let checkoutItems = document.getElementById("items");
+let qty3 = document.getElementById("displayQty3");
+
 let prodPrice1 = document.getElementById("precio1");
 let prodPrice2 = document.getElementById("precio2");
-let subtotal = document.getElementById("subtotal");
+let prodPrice3 = document.getElementById("precio3");
+
 let productContainer1;
 let productContainer2;
+let productContainer3;
+
+let checkoutItems = document.getElementById("items");
+let subtotalDisp = document.getElementById("subtotal");
+let subtotalFlt = parseFloat(subtotalDisp.innerHTML);
 
 // Producto 1:
 
@@ -56,8 +51,6 @@ function decreaseQty1(){
     }
 }
 
-
-
 function addProdCard1(){
     let qtyMultiplier1 = parseFloat(qty1.value);
     let priceVal1 = parseFloat(prodPrice1.innerHTML);
@@ -72,10 +65,11 @@ function addProdCard1(){
         clicked = true;
     }
     
-    prodData1.innerHTML = "T-14 Armata, cantidad: " + qty1.value + "<br />" + 
+    prodData1.innerHTML = "1 kg Manzana, cantidad: " + qty1.value + "<br />" + 
     "Precio: $" + endPrice;
     
-    subtotal.innerHTML = endPrice;
+    subtotalFlt = subtotalFlt + endPrice;
+    subtotalDisp.innerHTML = subtotalFlt;
 }
 
 increaseBtn1.onclick = increaseQty1;
@@ -127,10 +121,11 @@ function addProdCard2(){
         clicked2 = true;
     }
     
-    prodData2.innerHTML = "T-90 Vintage, cantidad: " + qty2.value + "<br />" + 
+    prodData2.innerHTML = "1 kg Plátano, cantidad: " + qty2.value + "<br />" + 
     "Precio: $" + endPrice2;
     
-    //subtotal.innerHTML = endPrice1;
+    subtotalFlt = subtotalFlt + endPrice2;
+    subtotalDisp.innerHTML = subtotalFlt;
 }
 
 increaseBtn2.onclick = increaseQty2;
@@ -139,3 +134,59 @@ decreaseBtn2.onclick = decreaseQty2;
 var clicked2 = false;
 
 cestaBtn2.onclick = addProdCard2;
+
+// Producto 3:
+
+let increaseBtn3 = document.getElementById("increaseBtn3");
+let decreaseBtn3 = document.getElementById("decreaseBtn3");
+
+function increaseQty3(){
+
+    if(qty3.value <= 9){
+        qty3.value++;
+        console.log(qty3.value);
+    } else {
+        console.log("Máximo de unidades permitidas")
+        alert("Máximo de unidades permitidas por producto!")
+    }
+    
+}
+
+function decreaseQty3(){
+
+    if(qty3.value != 1){
+        qty3.value--;
+        console.log(qty3.value);
+    } else {
+        console.log("Mínimo de unidades permitidas")
+        alert("Mínimo de unidades permitidas por producto!")
+    }
+}
+
+function addProdCard3(){
+    let qtyMultiplier3 = parseFloat(qty3.value);
+    let priceVal3 = parseFloat(prodPrice3.innerHTML);
+    let endPrice3 = priceVal3*qtyMultiplier3;
+    
+    if (!clicked3){
+        productContainer3 = document.createElement("label");
+        productContainer3.setAttribute("id", "prodCard3");
+        productContainer3.setAttribute("style", "font-size: 20px;font-family: Jost, sans-serif; margin: 50px;padding: 5px;padding-right: 75px;padding-left: 75px;padding-top: 5px;padding-bottom: 5px;width: 750px;")
+        document.getElementById('checkout').appendChild(productContainer3);
+        prodData3 = productContainer3;
+        clicked3 = true;
+    }
+    
+    prodData3.innerHTML = "1 kg Limón, cantidad: " + qty3.value + "<br />" + 
+    "Precio: $" + endPrice3;
+    
+    subtotalFlt = subtotalFlt + endPrice3;
+    subtotalDisp.innerHTML = subtotalFlt;
+}
+
+increaseBtn3.onclick = increaseQty3;
+decreaseBtn3.onclick = decreaseQty3;
+
+var clicked3 = false;
+
+cestaBtn3.onclick = addProdCard3;

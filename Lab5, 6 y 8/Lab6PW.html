@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Lab6</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost&amp;display=swap">
+    <link rel="stylesheet" href="assets/css/Login-Form-Clean.css">
+    <link rel="stylesheet" href="assets/css/Navigation-with-Button.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body style="background: var(--bs-gray-200);border-style: none;">
+    <div id="navbar">
+        <section>
+            <nav class="navbar navbar-light navbar-expand-lg navigation-clean-button" style="height: 60px;background: var(--bs-gray-dark);">
+                <div class="container"><a class="navbar-brand" href="index.html" style="color: var(--bs-light);font-family: Jost, sans-serif;">Lab 5 y 6</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navcol-1">
+                        <ul class="navbar-nav me-auto">
+                            <li class="nav-item"><a class="nav-link" href="index.html" style="font-family: Jost, sans-serif;color: var(--bs-gray-300);">Laboratorio 5</a></li>
+                            <li class="nav-item"><a class="nav-link" href="Lab6.html" style="font-family: Jost, sans-serif;color: var(--bs-gray-300);">Laboratorio 6</a></li>
+                        </ul><span class="navbar-text actions"> <a class="login" href="#" style="color: var(--bs-gray-100);font-family: Jost, sans-serif;">Ejercicio Passwords</a></span>
+                    </div>
+                </div>
+            </nav>
+        </section>
+    </div>
+    <div id="banner">
+        <section style="background: url(&quot;assets/img/L6_banner.jpg&quot;) top / cover no-repeat;height: 300px;box-shadow: 0px 0px 5px;">
+            <h1 style="text-align: center;padding: 15px;color: var(--bs-white);font-family: Jost, sans-serif;font-weight: bold;">Laboratorio 6 - JavaScript</h1>
+        </section>
+    </div>
+    <div id="info" style="background: var(--bs-gray-100);">
+        <section style="margin: 50px;padding: 25px;padding-right: 75px;padding-left: 75px;padding-top: 25px;padding-bottom: 10px;">
+            <h3 style="font-family: Jost, sans-serif;text-align: center;">Laboratorio 6 - Verificación de Passwords</h3>
+            <p>En este Laboratorio utilizaremos JavaScript para hacer una serie de ejercicios, en este caso, una sencilla verificación de Passwords.</p>
+        </section>
+    </div>
+    <div class="invisible" id="bannerSuccess" style="background: var(--bs-teal);">
+        <section style="margin: 25px;padding: 25px;padding-right: 75px;padding-left: 75px;padding-top: 25px;padding-bottom: 10px;">
+            <h3 style="font-family: Jost, sans-serif;text-align: center;color: var(--bs-white);">Verificación exitosa</h3>
+        </section>
+    </div>
+    <div class="invisible" id="bannerError" style="background: var(--bs-red);">
+        <section style="margin: 25px;padding: 25px;padding-right: 75px;padding-left: 75px;padding-top: 25px;padding-bottom: 10px;">
+            <h3 style="font-family: Jost, sans-serif;text-align: center;color: var(--bs-white);">Verificación incorrecta, verifique sus datos</h3>
+        </section>
+    </div>
+    <div id="password-area" style="background: var(--bs-gray-100);">
+        <section class="login-clean">
+            <form method="post">
+                <h2 class="visually-hidden">Login Form</h2>
+                <div class="mb-3"><input class="form-control" type="password" id="pwInput" name="password" value="Password"></div>
+                <div class="mb-3"><input class="form-control" type="password" id="pwVerify" name="ver-password" value="Password"></div>
+                <div class="mb-3"><button class="btn btn-primary d-block w-100" id="btnVerify" type="button" style="background: var(--bs-blue);">Verificar</button></div>
+            </form>
+        </section>
+    </div>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/Lab6PW.js"></script>
+    <script src="assets/js/Lab6Store.js"></script>
+</body>
+
+</html>
