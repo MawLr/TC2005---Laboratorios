@@ -1,0 +1,32 @@
+{
+  "name": "lab11",
+  "version": "1.0.0",
+  "description": "lab11",
+  "main": "appEx.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MawLr/TC2005---Laboratorios.git"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "JMMR",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MawLr/TC2005---Laboratorios/issues"
+  },
+  "homepage": "https://github.com/MawLr/TC2005---Laboratorios#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+
+  "dependencies": {
+    "body-parser": "^1.19.2",
+    "express": "^4.17.3"
+  }
+  
+}
