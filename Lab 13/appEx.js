@@ -26,7 +26,7 @@ app.use((request, response, next) => {
 
 app.use((request, response, next) => {
     console.log('Otro middleware!');
-    response.render('lista.ejs'); //Manda la respuesta
+    response.render('Nada'); //Manda la respuesta
 });
 
 app.listen(3000);
