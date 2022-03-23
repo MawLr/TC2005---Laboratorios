@@ -6,7 +6,7 @@ const userController = require('../controllers/user_controller');
 router.get('/login', userController.get_login);
 router.post('/login', userController.login);
 router.get('/logout', userController.logout);
-router.get('/tops', userController.tops);
+router.get('/maquinas-guerra.routes.js', userController.maquinasguerra);
 router.get('/', userController.root);
 
 module.exports = router;

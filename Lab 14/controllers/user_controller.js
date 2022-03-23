@@ -7,7 +7,7 @@ exports.get_login = (request, response, next) => {
     }); 
 };
 
-exports.tops = (request, response, next) => {
+exports.maquinasguerra = (request, response, next) => {
     response.render('index', {
         username: request.session.username ? request.session.username : '',
         info: ''
