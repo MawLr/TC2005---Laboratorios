@@ -17,7 +17,7 @@ exports.maquinas_guerra = (request, response, next) => {
 exports.login = (request, response, next) => {
     if (User.login(request.body.username, request.body.password)) {
         request.session.username = request.body.username;
-        response.redirect('/users/maquinasguerra'); 
+        response.redirect('/users/maquinas_guerra'); 
     } else {
         response.redirect('/users/login'); 
     }

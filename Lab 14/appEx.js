@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 const rutas_vehiculos = require('./routes/vehiculos.routes');
 const rutas_armas = require('./routes/armas.routes');
 const rutas_users = require('./routes/user.routes');
-const rutas_maquinasguerra = require('./routes/maquinas-guerra.routes');
+const rutas_maquinas_guerra = require('./routes/maquinas-guerra.routes');
 
 const path = require('path');
 

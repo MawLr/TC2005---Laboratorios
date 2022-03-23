@@ -9,7 +9,14 @@
 <a class="navbar-brand" href="/">
 <img src="https://static.wikia.nocookie.net/battlefield/images/d/d1/BF4_T-90A_Master_Dog_Tag.png" alt="" width="64" height="32" class="d-inline-block align-text-top">
 Maquinas de Guerra</a>
+
+<% if (username != '') { %>
+    <button class="btn btn-outline-secondary btn-lg" type="button"><a href="/users/maquinas_guerra">Volver a Maquinas de Guerra</a></button>
+    <button class="btn btn-outline-secondary btn-lg" type="button"><%= username %></button>
+    <button class="btn btn-outline-secondary btn-lg" type="button"><a href="/users/logout">Salir</a></button>
+    <% } %>
+
 <span class="navbar-text">
-<b>José Manuel Medina Rodríguez</b><br>Construcción de Software y Toma de Decisiones (Gpo. 402)<br>Lab14
+<b>José Manuel Medina Rodríguez</b><br>Construcción de Software y Toma de Decisiones (Gpo. 402)<br>Lab 14
 </span></div></nav>
 <div class="container ">
