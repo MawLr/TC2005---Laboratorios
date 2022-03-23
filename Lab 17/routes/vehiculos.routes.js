@@ -6,7 +6,7 @@ const visualController = require('../controllers/vehiculos_controller');
 //Blindados
 router.get('/nuevoBlindado', visualController.get_nuevo_blindado);
 router.post('/nuevoBlindado', visualController.post_nuevo_blindado);
-router.get('/:idBlindado', visualController.getBlindado);
+//router.get('/:idBlindado', visualController.getBlindado);
 
 //Aviones
 router.get('/nuevoAvion', visualController.get_nuevo_avion);
