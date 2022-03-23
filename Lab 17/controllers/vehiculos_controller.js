@@ -50,12 +50,29 @@ exports.post_nuevo_navio = (request, response, next) => {
 
 // --- MAIN --- //
 exports.principal = (request, response, next) => {
-    console.log('Main Vehiculos');
-    response.render('listaVehiculos', {blindados:Blindados.fetchAllBlindados(), 
-        aviones:Aviones.fetchAllAviones(), 
-        navios:Navios.fetchAllNavios(), 
-        username: request.session.username ? request.session.username : '',
-        ultimo_blindado: request.cookies.ultimo_blindado ? request.cookies.ultimo_blindado : '',
-        ultimo_avion: request.cookies.ultimo_avion ? request.cookies.ultimo_avion : '',
-        ultimo_navio: request.cookies.ultimo_navio ? request.cookies.ultimo_navio : ''})
+    Blindados.fetchAllBlindados()
+    .then(([blindados, fieldData]) => {
+        Aviones.fetchAllAviones()
+        .then(([aviones,fieldData]) =>{
+            Navios.fetchAllNavios()
+            .then(([navios,fieldData]) =>{
+                response.render('listaVehiculos', {
+                    blindados:blindados,
+                    aviones:aviones,
+                    navios:navios,
+                    username: request.session.username ? request.session.username : '',
+                    ultimo_blindado: request.cookies.ultimo_blindado ? request.cookies.ultimo_blindado : '',
+                    ultimo_avion: request.cookies.ultimo_avion ? request.cookies.ultimo_avion : '',
+                    ultimo_navio: request.cookies.ultimo_navio ? request.cookies.ultimo_navio : ''
+                })
+            }).catch(error => {
+                console.log(error);
+            });
+        }).catch(error =>{
+            console.log(error);
+        });
+
+    })
+    .catch(err => console.log(err)); 
+
 }

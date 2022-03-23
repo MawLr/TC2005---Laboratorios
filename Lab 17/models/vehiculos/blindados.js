@@ -1,31 +1,34 @@
-const fs = require('fs');
-
-var blindados = [];
-
-//Para leer las películas
-fs.readFile('./maquinas-guerra/blindados.json', (err, data) => {
-    if (err) throw err;
-    blindados = JSON.parse(data);
-    console.log(blindados)
-});
+const db = require('../../util/database');
 
 module.exports = class Blindados{
 
     //Constructor de la clase. Sirve para crear un nuevo objeto, y en él se definen las propiedades del modelo
-    constructor(nuevo_nombre) {
+    constructor(nuevo_nombre,nueva_descBlindado,nueva_imagen) {
         this.nombre = nuevo_nombre;
+        this.descBlindado = nueva_descBlindado;
+        this.imagen = nueva_imagen;
     }
 
     //Este método servirá para guardar de manera persistente el nuevo objeto. 
     save() {
-        blindados.push(this);
-        let blind = JSON.stringify(blindados);
-        fs.writeFileSync('./maquinas-guerra/blindados.json', blind, 'utf8');
+        return db.execute('INSERT INTO blindados (nombre, descBlindado ,imagen) VALUES (?, ?,?)',
+        [this.nombre, this.descBlindado,this.imagen]
+    );
+    }
 
+    getBlindado(){
+        return db.execute('Select *  FROM blindados WHERE idBlindado = (?)',[this.id]
+        );
+    }
+
+    static fetchOneBlindado(idBlindado) {
+        return db.execute('SELECT * FROM blindado WHERE idBlindado=?', [idBlindado]);
     }
 
     //Este método servirá para devolver los objetos del almacenamiento persistente.
     static fetchAllBlindados() {
-        return blindados;
+       console.log(db.execute('SELECT * FROM blindados'));
+        return db.execute('SELECT * FROM blindados');
     }
+
 }

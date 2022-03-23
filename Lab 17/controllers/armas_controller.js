@@ -35,9 +35,21 @@ exports.post_nuevo_manufacturero = (request, response, next) => {
 // --- MAIN --- //
 exports.principal = (request, response, next) => {
     console.log('Main Armas');
-    response.render('listaArmas', {armas: Armas.fetchAllArmas(), 
-        manufactureros: Manufactureros.fetchAllManufactureros(),
-        username: request.session.username ? request.session.username : '',
-        ultima_arma: request.cookies.ultima_arma ? request.cookies.ultima_arma : '',
-        ultimo_man: request.cookies.ultimo_man ? request.cookies.ultimo_man : ''})
-}
+    Armas.fetchAllArmas()
+        .then(([armas, fieldData]) => {
+            Manufactureros.fetchAllManufactureros()
+            .then(([manufactureros,fieldData]) => {
+                response.render('listaArmas', {
+                    armas: armas,
+                    manufactureros:manufactureros,
+                    username: request.session.username ? request.session.username : '',
+                    ultima_arma: request.cookies.ultima_arma ? request.cookies.ultima_arma : '',
+                    ultimo_man: request.cookies.ultimo_man ? request.cookies.ultimo_man : ''
+                })
+            }).catch(error => {
+                console.log(error);
+            });
+        }).catch(error =>{
+            console.log(error);
+        });
+    }
