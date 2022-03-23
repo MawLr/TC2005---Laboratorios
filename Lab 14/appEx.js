@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 const rutas_vehiculos = require('./routes/vehiculos.routes');
 const rutas_armas = require('./routes/armas.routes');
 const rutas_users = require('./routes/user.routes');
-const rutas_maquinasguerra = require('./routes/maquinas-guerra.routes');
+const rutas_maquinasguerra = require('./routes/maquinasguerra.routes');
 const path = require('path');
 
 app.set('view engine', 'ejs');
@@ -38,7 +38,7 @@ app.use((request, response, next) => {
 
 app.use((request, response, next) => {
     console.log('Otro middleware!');
-    response.render('Nada'); //Manda la respuesta
+    response.send('Nada'); //Manda la respuesta
 });
 
 app.listen(3000);

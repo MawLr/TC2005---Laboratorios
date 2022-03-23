@@ -1,0 +1,32 @@
+<%- include('includes/head.ejs') %>
+
+<body>
+    <h1 id="principal">Este sitio es de Armas y Manufactureros de Armas</h1><br>
+    <p>Estas son algunas armas modernas:</p>
+    
+    <!--Armas-->
+    <br><p>Armas:</p>
+    <ul class="list-group">
+    <% for (let arma of armas) { %>
+        <li class = "list-group-item list-group-item-dark"><%= arma.nombre %></li>
+    <%} %>
+    
+    </ul>
+    <br>
+    <a href="armas/nuevaArma"><button type="button" class="btn btn-outline-secondary">Agregar un nueva Arma</button></a>
+    <br><br>
+    
+    <!-- Manufacturero -->
+    <br><p>Manufactureros:</p>
+    <ul class="list-group">
+    <% for (let manufacturero of manufactureros) { %>
+        <li class = "list-group-item list-group-item-dark"><%= manufacturero.nombre %></li>
+    <%} %>
+    </ul>
+    <br>
+    <a href="armas/nuevoManufacturero"><button type="button" class="btn btn-outline-secondary">Agregar un nuevo Manufacturero</button></a>
+    <br><br>
+    </div>
+</body>
+
+<%- include('includes/foot.ejs') %>
