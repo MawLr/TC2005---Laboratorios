@@ -8,6 +8,7 @@ exports.get_login = (request, response, next) => {
 };
 
 exports.maquinas_guerra = (request, response, next) => {
+    console.log('test');
     response.render('index', {
         username: request.session.username ? request.session.username : '',
         info: ''
@@ -15,11 +16,13 @@ exports.maquinas_guerra = (request, response, next) => {
 };
 
 exports.login = (request, response, next) => {
+    
     if (User.login(request.body.username, request.body.password)) {
         request.session.username = request.body.username;
         response.redirect('/users/maquinas_guerra'); 
+        
     } else {
-        response.redirect('/users/login'); 
+        //response.redirect('/users/login'); 
     }
     
 };
