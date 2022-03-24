@@ -11,7 +11,7 @@ module.exports = class Armas{
 
     //Este método servirá para guardar de manera persistente el nuevo objeto. 
     save() {
-        return db.execute('INSERT INTO armas (idArma, nombre, descArma, imagen) VALUES (?, ?, ?, ?)',
+        return db.execute('INSERT INTO armas (nombre, descArma, imagen) VALUES (?, ?, ?)',
         [this.nombre, this.descArma, this.imagen]
     );
     }

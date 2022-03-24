@@ -5,7 +5,7 @@ module.exports = class Aviones{
     //Constructor de la clase. Sirve para crear un nuevo objeto, y en él se definen las propiedades del modelo
     constructor(nuevo_nombre,nueva_descAvion,nueva_imagen) {
         this.nombre = nuevo_nombre;
-        this.descdescAvion = nueva_descAvion;
+        this.descAvion = nueva_descAvion;
         this.imagen = nueva_imagen;
     }
 

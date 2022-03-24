@@ -26,7 +26,7 @@ module.exports = class Manufactureros{
     }
 
     //Este método servirá para devolver los objetos del almacenamiento persistente.
-    static fetchAllManufactureros() {
+    static fetchAllMan() {
        console.log(db.execute('SELECT * FROM manufactureros'));
         return db.execute('SELECT * FROM manufactureros');
     }

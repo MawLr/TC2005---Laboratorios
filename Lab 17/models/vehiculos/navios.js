@@ -12,7 +12,7 @@ module.exports = class Navios{
     //Este método servirá para guardar de manera persistente el nuevo objeto. 
     save() {
         return db.execute('INSERT INTO navios (nombre, descNavio, imagen) VALUES (?, ?,?)',
-        [this.nombre, this.descNavios, this.imagen]
+        [this.nombre, this.descNavio, this.imagen]
     );
     }
 

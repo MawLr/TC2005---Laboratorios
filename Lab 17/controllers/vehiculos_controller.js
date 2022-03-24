@@ -5,47 +5,62 @@ const Navios = require('../models/vehiculos/navios');
 
 // --- BLINDADOS --- //
 exports.get_nuevo_blindado = (request, response, next) => {
-    console.log('GET /vehiculos/nuevoBlindado');
-    response.render('nuevoBlindado' , {username: request.session.username ? request.session.username : ''});
+    Blindados.fetchAllBlindados()
+        .then(([rows, fieldData]) => {
+            response.render('nuevoBlindado', {
+                blindados: rows,
+                username: request.session.username ? request.session.username : '',
+            })
+        })
+        .catch(err => console.log(err));
 };
 
-exports.post_nuevo_blindado = (request, response, next) => {
-    console.log('POST /vehiculos/nuevoBlindado');
-    console.log(request.body);
-    let blind = new Blindados(request.body.nombre);
-    blind.save();
-    response.setHeader('Set-Cookie', 'ultimo_blindado='+blind.nombre+'; HttpOnly', 'utf8');
-    response.redirect('/vehiculos');
+exports.post_nuevo_blindado = (request, response, next) => {    
+    const blind = new Blindados(request.body.nombre, request.body.descBlindado,request.body.imagen);
+    blind.save().then(() => {
+        response.setHeader('Set-Cookie', 'ultimo_blindado='+blind.nombre+'; HttpOnly', 'utf8');
+        response.render()
+    }).catch(err => console.log(err));
 };
 
 // --- AVIONES --- //
 exports.get_nuevo_avion = (request, response, next) => {
-    console.log('GET /vehiculos/nuevoAvion');
-    response.render('nuevoAvion', {username: request.session.username ? request.session.username : ''});
+    Aviones.fetchAllAviones()
+        .then(([rows, fieldData]) => {
+            response.render('nuevoAvion', {
+                aviones: rows,
+                username: request.session.username ? request.session.username : '',
+            })
+        })
+        .catch(err => console.log(err));
 };
 
-exports.post_nuevo_avion = (request, response, next) => {
-    console.log('POST /vehiculos/nuevoAvion');
-    console.log(request.body);
-    let avi = new Aviones(request.body.nombre);
-    avi.save();
-    response.setHeader('Set-Cookie', 'ultimo_avion='+avi.nombre+'; HttpOnly', 'utf8');
-    response.redirect('/vehiculos');
+exports.post_nuevo_avion = (request, response, next) => {    
+    const avi = new Aviones(request.body.nombre, request.body.descAvion,request.body.imagen);
+    avi.save().then(() => {
+        response.setHeader('Set-Cookie', 'ultimo_avion='+avi.nombre+'; HttpOnly', 'utf8');
+        response.render()
+    }).catch(err => console.log(err));
 };
 
 // --- NAVIOS --- // 
 exports.get_nuevo_navio = (request, response, next) => {
-    console.log('GET /vehiculos/nuevoNavio');
-    response.render('nuevoNavio', {username: request.session.username ? request.session.username : ''});
+    Navios.fetchAllNavios()
+        .then(([rows, fieldData]) => {
+            response.render('nuevoNavio', {
+                navios: rows,
+                username: request.session.username ? request.session.username : '',
+            })
+        })
+        .catch(err => console.log(err));
 };
 
-exports.post_nuevo_navio = (request, response, next) => {
-    console.log('POST /vehiculos/nuevoNavio');
-    console.log(request.body);
-    let nav = new Navios(request.body.nombre);
-    nav.save();
-    response.setHeader('Set-Cookie', 'ultimo_navio='+nav.nombre+'; HttpOnly', 'utf8');
-    response.redirect('/vehiculos');
+exports.post_nuevo_navio = (request, response, next) => {    
+    const nav = new Navios(request.body.nombre, request.body.descNavio,request.body.imagen);
+    nav.save().then(() => {
+        response.setHeader('Set-Cookie', 'ultimo_navio='+nav.nombre+'; HttpOnly', 'utf8');
+        response.render()
+    }).catch(err => console.log(err));
 };
 
 // --- MAIN --- //
@@ -71,7 +86,6 @@ exports.principal = (request, response, next) => {
         }).catch(error =>{
             console.log(error);
         });
-
     })
     .catch(err => console.log(err)); 
 
