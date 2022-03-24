@@ -1,0 +1,24 @@
+<%- include('includes/head.ejs') %>
+
+<body>
+    <h1 id="principal">Las mejores armas y manufactureros de armas</h1>
+    <h2>Agrega un nuevo Manufacturero:</h2>
+    <br>
+    <form action="/armas/nuevoManufacturero" method="POST">
+    <label for="nombre">Nombre del Manufacturero: </label>
+    <input type="text" id="nombre" name="nombre" placeholder="Kalashnikov">
+    <br><br>
+    <label for="nombre">Descripción: </label> <br>
+    <textarea rows = "5" cols = "60" id = "descMan" name = "descMan" placeholder="Kalashnikov es una de las compañías más famosas de la historia..."></textarea><br>
+    <br><br>
+    <label for="nombre">Imagen: </label> <br>
+    <textarea rows = "2" cols = "60" id = "imagen" name = "imagen" placeholder="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/KalashnikovConcern.svg/1280px-KalashnikovConcern.svg.png"></textarea><br>
+    <br><br>
+    <a><input type ="submit" value="Enviar"></a>
+    </form>
+    <br><br>
+    <a href="/armas"><button type="button" class="btn btn-secondary">Regresar a las Máquinas de Guerra</button></a>
+    </div>
+</body>
+
+<%- include('includes/foot.ejs') %>

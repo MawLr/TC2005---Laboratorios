@@ -1,0 +1,100 @@
+<%- include('includes/head.ejs') %>
+
+
+<h1 id="principal">Este sitio es de Blindados, Aviones, Navíos potentes</h1><br>
+<p>Estas son algunas máquinas de guerra:</p>
+    
+<!-- Blindados -->
+<br><p>Blindados:</p>
+<div class="row row-cols-1 row-cols-md-2 g-2">
+   <% for (let blindado of blindados) { %>
+   <div class = "row">
+       <div class="card mb-3" style="max-width: 540px;">
+           <div class="row g-0">
+             <div class="col-md-4">
+               <img src="<%- blindado.imagen %>" class="img-fluid rounded-start" alt="...">
+             </div>
+             <div class="col-md-8">
+               <div class="card-body">
+                 <h5 class="card-title"><%- blindado.nombre %></h5>
+                 <p class="card-text"><%- blindado.descBlindado %></p>
+                 <p class="card-text"><small class="text-muted"><%- blindado.created_at %></small></p>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+   <%} %>  
+ </div>
+<br>
+<% if (ultimo_blindado!= '') { %>
+   <p><b>El último blindado agregado fue: <%= ultimo_blindado %></b></p>
+<% } %>
+<br>
+
+<a href="vehiculos/nuevoBlindado"><button type="button" class="btn btn-outline-secondary">Agregar un nuevo Blindado</button></a>
+<br><br>
+
+<!-- Aviones -->
+<br><p>Aviones:</p>
+<div class="row row-cols-1 row-cols-md-2 g-2">
+   <% for (let avion of aviones) { %>
+   <div class = "row">
+       <div class="card mb-3" style="max-width: 540px;">
+           <div class="row g-0">
+             <div class="col-md-4">
+               <img src="<%- avion.imagen %>" class="img-fluid rounded-start" alt="...">
+             </div>
+             <div class="col-md-8">
+               <div class="card-body">
+                 <h5 class="card-title"><%- avion.nombre %></h5>
+                 <p class="card-text"><%- avion.descAvion %></p>
+                 <p class="card-text"><small class="text-muted"><%- avion.created_at %></small></p>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+   <%} %>  
+ </div>
+<br>
+<% if (ultimo_avion!= '') { %>
+   <p><b>El último avión agregado fue: <%= ultimo_avion %></b></p>
+<% } %>
+<br>
+
+<a href="vehiculos/nuevoAvion"><button type="button" class="btn btn-outline-secondary">Agregar un nuevo Avión</button></a>
+<br><br>
+
+<!-- Navíos -->
+<br><p>Navíos:</p>
+<div class="row row-cols-1 row-cols-md-2 g-2">
+   <% for (let navio of navios) { %>
+   <div class = "row">
+       <div class="card mb-3" style="max-width: 540px;">
+           <div class="row g-0">
+             <div class="col-md-4">
+               <img src="<%- navio.imagen %>" class="img-fluid rounded-start" alt="...">
+             </div>
+             <div class="col-md-8">
+               <div class="card-body">
+                 <h5 class="card-title"><%- navio.nombre %></h5>
+                 <p class="card-text"><%- navio.descNavio %></p>
+                 <p class="card-text"><small class="text-muted"><%- navio.created_at %></small></p>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+   <%} %>  
+ </div>
+<br>
+<% if (ultimo_navio!= '') { %>
+   <p><b>El último navío agregado fue: <%= ultimo_navio %></b></p>
+<% } %>
+<br>
+
+<a href="vehiculos/nuevoNavio"><button type="button" class="btn btn-outline-secondary">Agregar un nuevo Navío</button></a>
+<br><br>
+
+<%- include('includes/foot.ejs') %>

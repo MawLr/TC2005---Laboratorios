@@ -1,0 +1,24 @@
+<%- include('includes/head.ejs') %>
+
+<body>
+    <h1 id="principal">Los mejores vehiculos de guerra modernos</h1>
+    <h2>Agrega un nuevo Avión:</h2>
+    <br>
+    <form action="/vehiculos/nuevoAvion" method="POST">
+    <label for="nombre">Nombre del Avión: </label>
+    <input type="text" id="nombre" name="nombre" placeholder="Su-35">
+    <br><br>
+    <label for="nombre">Descripción: </label> <br>
+    <textarea rows = "5" cols = "60" id = "descAvion" name = "descAvion" placeholder="El Sukhoi Su-35 es uno de los caza-bombarderos..."></textarea><br>
+    <br><br>
+    <label for="nombre">Imagen: </label> <br>
+    <textarea rows = "2" cols = "60" id = "imagen" name = "imagen" placeholder="https://upload.wikimedia.org/wikipedia/commons/e/ec/Russian_Air_Force%2C_RF-81719%2C_Sukhoi_Su-35S_%2849581740157%29.jpg"></textarea><br>
+    <br><br>
+    <a><input type ="submit" value="Enviar"></a>
+    </form>
+    <br><br>
+    <a href="/vehiculos"><button type="button" class="btn btn-secondary">Regresar a las Máquinas de Guerra</button></a>
+    </div>
+</body>
+
+<%- include('includes/foot.ejs') %>

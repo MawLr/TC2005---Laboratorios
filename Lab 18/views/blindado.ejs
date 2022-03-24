@@ -1,0 +1,41 @@
+<%- include('includes/head.ejs') %>
+    <h1 id="principal">Este sitio es de capybaras chidos</h1>
+    <p>Tenemos los siguientes capybaras:</p>
+    <!--Blindados-->
+    <br><h3><p>Blindados:</p></h3>
+    <% if (blindados.length > 0) { %>
+    <div class="row row-cols-1 row-cols-md-2 g-2">
+       <% for (let blindado of blindados) { %>
+       <div class = "row">
+           <div class="card mb-3" style="max-width: 540px;">
+               <div class="row g-0">
+                 <div class="col-md-4">
+                   <img src="<%- blindado.imagen %>" class="img-fluid rounded-start" alt="...">
+                 </div>
+                 <div class="col-md-8">
+                   <div class="card-body">
+                     <h5 class="card-title"><%- blindado.nombre %></h5>
+                     <p class="card-text"><%- blindado.descBlindado %></p>
+                     <p class="card-text"><small class="text-muted"><%- blindado.created_at %></small></p>
+                   </div>
+                 </div>
+               </div>
+             </div>
+           </div>
+       <%} %>  
+    
+   <br>
+    <% } else { %>
+        <h1>Ahorita no existe ese id, regresa pronto.</h1>
+    <% } %>  
+    </div>
+    <% if (ultimo_blindado != '') { %>
+        <p><b>El último blindado agregado fue: <%= ultimo_blindado %></b></p>
+    <% } %>  
+    <br>
+    <a href="vehiculos/nuevoBlindado"><button type="button" class="btn btn-outline-secondary">Agregar un nuevo blindado</button></a>
+    <br><br>
+</div>
+
+    
+<%- include('includes/foot.ejs') %>

@@ -1,0 +1,24 @@
+<%- include('includes/head.ejs') %>
+
+<body>
+    <h1 id="principal">Los mejores vehiculos de guerra modernos</h1>
+    <h2>Agrega un nuevo Blindado:</h2>
+    <br>
+    <form action="/vehiculos/nuevoBlindado" method="POST">
+    <label for="nombre">Nombre del Blindado: </label>
+    <input type="text" id="nombre" name="nombre" placeholder="T-90">
+    <br><br>
+    <label for="nombre">Descripción: </label> <br>
+    <textarea rows = "5" cols = "60" id = "descBlindado" name = "descBlindado" placeholder="El T-90 es uno de los tanques más modernos..."></textarea><br>
+    <br><br>
+    <label for="nombre">Imagen: </label> <br>
+    <textarea rows = "2" cols = "60" id = "imagen" name = "imagen" placeholder="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/%D0%A2-90%D0%9C.jpg/1280px-%D0%A2-90%D0%9C.jpg"></textarea><br>
+    <br><br>
+    <a><input type ="submit" value="Enviar"></a>
+    </form>
+    <br><br>
+    <a href="/vehiculos"><button type="button" class="btn btn-secondary">Regresar a las Máquinas de Guerra</button></a>
+    </div>
+</body>
+
+<%- include('includes/foot.ejs') %>
