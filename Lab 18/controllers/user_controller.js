@@ -33,7 +33,7 @@ exports.login = (request, response, next) => {
                         request.session.user = user;
                         request.session.username = user.username;
                         return request.session.save(err => {
-                            response.redirect('./tops');
+                            response.redirect('./maquinas_guerra');
                         });
                     }
                     response.redirect('/users/login');
