@@ -1,0 +1,66 @@
+<%- include('includes/head.ejs') %>
+
+<h1 id="principal">Este sitio es de Armas y Manufactureros de Armas</h1><br>
+<p>Estas son algunas armas modernas:</p>
+    
+<!-- Armas -->
+<br><p>Armas:</p>
+<div class="row row-cols-1 row-cols-md-2 g-2">
+   <% for (let arma of armas) { %>
+   <div class = "row">
+       <div class="card mb-3" style="max-width: 540px;">
+           <div class="row g-0">
+             <div class="col-md-4">
+               <img src="<%- arma.imagen %>" class="img-fluid rounded-start" alt="...">
+             </div>
+             <div class="col-md-8">
+               <div class="card-body">
+                 <h5 class="card-title"><%- arma.nombre %></h5>
+                 <p class="card-text"><%- arma.descArma %></p>
+                 <p class="card-text"><small class="text-muted"><%- arma.created_at %></small></p>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+   <%} %>  
+ </div>
+<br>
+<% if (ultima_arma!= '') { %>
+   <p><b>La última arma agregada fue: <%= ultima_arma %></b></p>
+<% } %>
+<br>
+
+<a href="armas/nuevaArma"><button type="button" class="btn btn-outline-secondary">Agregar una nueva Arma</button></a>
+<br><br>
+
+<!-- Manufactureros -->
+<br><p>Manufactureros:</p>
+<div class="row row-cols-1 row-cols-md-2 g-2">
+ <% for (let manufacturero of manufactureros) { %>
+ <div class = "row">
+     <div class="card mb-3" style="max-width: 540px;">
+         <div class="row g-0">
+           <div class="col-md-4">
+             <img src="<%- manufacturero.imagen %>" class="img-fluid rounded-start" alt="...">
+           </div>
+           <div class="col-md-8">
+             <div class="card-body">
+               <h5 class="card-title"><%- manufacturero.nombre %></h5>
+               <p class="card-text"><%- manufacturero.descMan %></p>
+               <p class="card-text"><small class="text-muted"><%- manufacturero.created_at %></small></p>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+ <%} %>  
+ <% if (ultimo_man!= '') { %>
+   <p><b>El último manufacturero agregado fue: <%= ultimo_man %></b></p>
+ <% } %> 
+</div>
+<a href="armas/nuevoManufacturero"><button type="button" class="btn btn-outline-secondary">Agregar un nuevo Manufacturero</button></a>
+<br><br>
+</div>
+
+<%- include('includes/foot.ejs') %>
