@@ -1,0 +1,3 @@
+El Laboratorio 19 se aplicó en el proyecto para que dependiendo del rol del usuario se desplegaran
+ciertos botones en la barra lateral, a continuación una liga al archivo donde mejor se puede apreciar
+dicha implementación: https://github.com/sarahmtz02/Epsilon_Solutions/blob/main/Backend/views/index.ejs
