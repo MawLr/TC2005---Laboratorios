@@ -24,20 +24,33 @@
 <div class="accordion" id="accordionPanelsStayOpenExample">
   <div class="accordion-item">
     <h2 class="accordion-header" id="panelsStayOpen-headingOne">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-        ¿Qué otras formas de autentificación existen?
+      <button class="accordion-button" type="button" data-bs-toggle="collapse"
+        data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+       <b>¿Qué ventajas y desventajas tiene la integración de tus aplicaciones web con servicios web desarrollados por terceros?</b>
       </button>
     </h2>
-
-    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+      aria-labelledby="panelsStayOpen-headingOne">
       <div class="accordion-body">
-       <ul>
-         <li>Basada en roles utilizando la estructura RBAC</li>
-         <li>Por pertenencia, basado en una posesión del usuario</li>
-         <li>Por mensaje de texto/SMS, usualmente utilizada en la verifiación de dos pasos</li>
-         <li>Autentificación con datos biométricos</li>
-         <li>Por caracteristicas, algún rasgo del usuario lo distingue</li>
-       </ul>
+
+        <h4><b>Ventajas</b></h4>
+        <ul>
+
+          <li>Permiten añadir funcionalidades que por separado serían complicadas de realizar, como lo son mapas y verificaciones captcha.</li>
+          <li>Los servicios Web fomentan los estándares y protocolos basados en texto, que hacen más fácil acceder a su contenido y entender su funcionamiento.</li>
+          <li>Al apoyarse en HTTP, los servicios Web pueden aprovecharse de los sistemas de seguridad firewall sin necesidad de cambiar las reglas de filtrado.</li>
+        
+        </ul>
+
+        <h4><b>Desventajas</b></h4>
+        <ul>
+
+          <li>Para realizar transacciones, no pueden compararse en su grado de desarrollo con los estándares abiertos de computación distribuida como CORBA (Common Object Request Broker Architecture).</li>
+          <li>Su rendimiento es bajo si se compara con otros modelos de computación distribuida, tales como Remote Method Invocation (RMI), CORBA o Distributed Component Object Model (DCOM). Es uno de los inconvenientes derivados de adoptar un formato basado en texto.</li>
+          <li>Existe poca información de servicios web para algunos lenguajes de programación.</li>
+        
+        </ul>
+
       </div>
     </div>
   </div>
